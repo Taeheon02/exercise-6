@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Exercise 7: Banh Mi, menus, and layout</title>
 <!-- This is embed code for Google fonts, take a look at  https://fonts.google.com/ for more info, you can just pick fonts and get an embed code which you use here. See how I am controlling them from <style> most of the CSS is just pasted in from Google and I have made tweaks to the weights and added other bits. This is what we will learn next week.-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +17,14 @@
   font-variation-settings: "wdth" 100;
   font-size: 16px;
   width: 960px;
+  text-align: center;
+  margin: 0 auto;
 }
    
+  #site-title {
+  font-size: 80px;
+  }
+  
   h1 {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
@@ -25,14 +32,12 @@
   font-style: normal;
   }
   
-  #site-title {
-  }
-  
   nav {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-size: 20px;
   }
   
   ul {
@@ -55,6 +60,13 @@
   }
   
   footer {
+  background-color: gray;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 30px;
+  width: 60%;
+  margin: 10px auto;
+  padding: 20px;
   }
   
   .container{
@@ -64,17 +76,28 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  justify-content: center;
   }
   
   .grid-item{
   background-color: gray;
-  border-radius: 10px;        
-  padding: 20px;             
-  text-align: center;         
+  border-radius: 20px;        
+  padding: 10px;             
+  text-align: center;
   }
   
+  .grid-item img {
+  width: 100%;               
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  }
   
-  
+  .green-section {
+  display: grid;
+  background: #98ff98;
+  border-radius: 10px;
+  }
   
 </style>
   
@@ -94,7 +117,8 @@
 </nav>
   
 <h1>At Greg's Banh Mi, we're serving up the perfect marriage of French and Vietnamese culinary traditions—crispy-on-the-outside, pillowy-on-the-inside baguettes loaded with bold, fresh flavorus that'll make your taste buds sing.</h1>
-  
+
+<div class="green-section"> 
 <div class="container">
     <div class="grid-item">
       <img src="banhmi.jpg" alt="Classic Pork Banh Mi">
@@ -122,7 +146,9 @@
 <p>Thinly sliced beef seared with aromatic five-spice blend and served with pickled vegetables and spicy Sriracha mayo. Rich, warming spices meet cool, crunchy toppings for an unforgettable flavor experience.</p>
 </div>
   </div> 
+    </div>
   
 <footer>Because life's too short for boring sandwiches. Greg's got you covered—one crispy baguette at a time.</footer>
+  
 </body>
 </html>
